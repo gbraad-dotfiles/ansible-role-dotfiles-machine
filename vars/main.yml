@@ -1,4 +1,4 @@
 ---
 machine_name: "{{ name | default(prefix) }}"
-machine_command: "{{ command }}"
+machine_command: "{{ command | default(action) }}"
 
