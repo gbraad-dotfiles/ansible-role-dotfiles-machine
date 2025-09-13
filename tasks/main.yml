@@ -1,8 +1,8 @@
 ---
-- name: Run machine command - {{prefix}} {{command}}
+- name: Run machine command - {{machine_name}} {{machine_command}}
   ansible.builtin.shell: |
     source ~/.dotfiles/source.sh
-    machine {{ prefix }} {{ command }}
+    machine {{ machine_name }} {{ machine_command }}
   args:
     executable: /bin/zsh
     chdir: "{{ ansible_env.HOME }}"
